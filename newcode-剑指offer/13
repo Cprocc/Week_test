@@ -1,0 +1,17 @@
+def change(s):
+    if len(s) <= 1:
+        return s
+    else:
+        list1 = []
+        list2 = []
+        for i in range(len(s)):
+            if s[i] % 2 != 0:
+                list1.append(s[i])
+            else:
+                list2.append(s[i])
+        return list1 + list2
+
+
+if __name__ == '__main__':
+    s = [2,3,4,5,2,7,9,6,10]
+    print(change(s))
