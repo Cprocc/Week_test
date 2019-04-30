@@ -1,37 +1,30 @@
-N,K = map(int, input().split())
 num = list(map(int, input().strip().split(' ')))
 
-def checkInterval(possible, sumvalue):
-    startMax = N-possible
-    for start in range(0,startMax + 1):
-        end = start + possible
-        if sum(num[start:end]) >= sumvalue:
-            return True
-    return False
+from collections import Counter
+cnum = Counter(num)
 
+two_times = 0
+one_times = 0
+three_times = 3
+res2 = []
+res1 = []
+res3 = []
+for i in cnum.keys():
+    if cnum[i] == 2:
+        two_times += 1
+        res2.append(i)
+    elif cnum[i] == 1:
+        one_times += 1
+        res1.append(i)
+    elif cnum[i] == 3:
+        three_times += 1
+        res3.append(i)
+res1.sort()
+res2.sort()
 
-if 1 not in num:
-    print(K)
-
-elif K >= N-1:
-    print(N)
-
-else:
-    maxleng = 0
-    tempmaxleng = 0
-    for i in num:
-        if i==1:
-            tempmaxleng += 1
-        else:
-            if tempmaxleng > maxleng:
-                maxleng = tempmaxleng
-            tempmaxleng = 0
-    sumvalue = maxleng
-    possible = sumvalue + K
-
-    while True:
-        if not checkInterval(possible, sumvalue):
-            break
-        sumvalue += 1
-        possible += 1
-    print(possible-1)
+if len(res3) <= 2:
+    print(0)
+if two_times == 0:
+    print(res1[0])
+if two_times == 2:
+    print(res2[0], res2[1])
