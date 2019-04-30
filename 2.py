@@ -1,11 +1,11 @@
-n = int(input())
-
-def lift(n):
-      if n <= 2:
-            return n
-      else:
-            return lift(n-1) + lift(n-2)
-print(lift(n))
+# n = int(input())
+#
+# def lift(n):
+#       if n <= 2:
+#             return n
+#       else:
+#             return lift(n-1) + lift(n-2)
+# print(lift(n))
 
 
 # public class Main {
@@ -29,27 +29,27 @@ print(lift(n))
 # }
 
 
-import java.util.Scanner;
-
-public class qu2 {
-
-public static void main(String[] args) {
-// write your code here
-Scanner sc = new Scanner(System.in );
-int n = sc.nextInt();
-int res = help(n);
-System.out.println(res);
-}
-
-static int help(int n) {
-// write your code here
-if (n <= 2){
-
-
-return n;
-}
-else {
-return help(n - 1) + help(n - 2);
-}
-}
-}
+# import java.util.Scanner;
+#
+# public class qu2 {
+#
+# public static void main(String[] args) {
+# // write your code here
+# Scanner sc = new Scanner(System.in );
+# int n = sc.nextInt();
+# int res = help(n);
+# System.out.println(res);
+# }
+#
+# static int help(int n) {
+# // write your code here
+# if (n <= 2){
+#
+#
+# return n;
+# }
+# else {
+# return help(n - 1) + help(n - 2);
+# }
+# }
+# }
