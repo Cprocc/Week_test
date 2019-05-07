@@ -250,3 +250,10 @@
 #     obj._MyCls__weight = 12
 #     print(obj.weight)
 
+# ans = ['a','b','c']
+# print(''.join(ans))
+res = 1
+for i in range(1, 10):
+    res *= i
+
+print(res)
