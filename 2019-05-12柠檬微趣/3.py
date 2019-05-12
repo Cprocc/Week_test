@@ -10,7 +10,7 @@ flag = 1
 
 # 遍历整个字符串
 for i in range(len(s)):
-    # 如果当前字符不在字典的key中,那么添加{s[i]:i}
+    # 如果当前字符不在字典的key中,那么添加{s[i]:i}到字典中
     if s[i] not in dic:
         dic[s[i]] = i
 
