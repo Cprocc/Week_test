@@ -257,3 +257,6 @@
 #     res *= i
 #
 # print(res)
+
+
+for index num in enumerate
