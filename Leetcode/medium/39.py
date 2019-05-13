@@ -17,23 +17,17 @@ def combinationSum(candidates, target):
 
 def combinationSumHelp(res, li, candidates, target, start):
     if target < 0:
-        return False
+        return
 
-    elif target == 0:
+    if target == 0:
         temp = li.copy()
         res.append(temp)
-        return False
+        return
 
-    else:
-        for i in range(start, len(candidates)):
-            li.append(candidates[i])
-            flag = combinationSumHelp(res, li, candidates, target-candidates[i], i)
-            li.pop()
-
-            if not flag:
-                break
-
-    return True
+    for i in range(start, len(candidates)):
+        li.append(candidates[i])
+        combinationSumHelp(res, li, candidates, target-candidates[i], i)
+        li.pop()
 
 
 if __name__ == '__main__':
