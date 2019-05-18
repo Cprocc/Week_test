@@ -277,7 +277,7 @@
 # exec用于语句，但不返回任何内容。 eval用于表达式并返回表达式值。
 # eval参数返回要执行的代码对象，single参数但它将忽略除第一个语句之外的所有内容。
 # 注意，带有结果的if/else 语句被认为是单个语句
-eval_code = compile('100+200', '', 'eval')
-print(eval(eval_code))
-
-exec('5')
+# eval_code = compile('100+200', '', 'eval')
+# print(eval(eval_code))
+#
+# exec('5')
