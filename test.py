@@ -260,3 +260,24 @@
 
 
 # for index num in enumerate
+# print(100+300)
+# print(eval('100+300'))
+
+# compile 是 exec 和 eval的低级版本.
+# 它不执行或者评估你的语句或者表达式，但返回可以执行它的代码对象。 模式如下：
+#
+# compile(string,'','eval') 返回将要执行的代码对象，如果你完成了 eval(string) 。
+# 请注意，在这里模式下，只有用你不能使用语句( 单) 表达式是否有效。
+# compile(string,'','exec') 返回将要执行的代码对象，如果你完成了 exec(string) 。
+# 你可以在这里使用任意数量的语句。
+# compile(string,'','single') 类似于 exec 模式，但它将忽略除第一个语句之外的所有内容。
+# 注意，带有结果的if/else 语句被认为是单个语句。
+#
+#
+# exec用于语句，但不返回任何内容。 eval用于表达式并返回表达式值。
+# eval参数返回要执行的代码对象，single参数但它将忽略除第一个语句之外的所有内容。
+# 注意，带有结果的if/else 语句被认为是单个语句
+eval_code = compile('100+200', '', 'eval')
+print(eval(eval_code))
+
+exec('5')
