@@ -22,7 +22,9 @@ def search(key):
             right = mid - 1
         else:
             while True:
-                if mid == right or grade_sort[mid] < grade_sort[mid+1]:
+                if mid == right:
+                    return mid
+                elif grade_sort[mid] < grade_sort[mid+1]:
                     return mid
                 else:
                     mid += 1
