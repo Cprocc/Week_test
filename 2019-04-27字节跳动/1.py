@@ -4,6 +4,9 @@ temp = []
 for i in range(n):
     temp.append(i)
 
+print (n)
+print (list1)
+
 list2 = []
 list2.append(temp)
 list2.append(list1)
