@@ -281,3 +281,62 @@
 # print(eval(eval_code))
 #
 # exec('5')
+
+
+
+
+def com1(a, b):
+    lens = len(a)
+    tip = [0]*lens
+    for i in range(len(b)):
+        for j in range(lens):
+            if b[i] in a:
+                tip[j] += 1
+
+    l_tag = 0
+    for i in range(lens):
+        if tip[i] > 0:
+            l_tag += 1
+        else:
+            break
+
+    r_tag = lens-1
+    for i in range(lens):
+        if tip[lens-1] > 0:
+            r_tag -= 1
+        else:
+            break
+
+    if r_tag == l_tag:
+        return 0
+    else:
+        for i in range(l_tag, r_tag+1):
+            if tip[i] == 0:
+                return 0
+    return 1
+
+
+# def merge_search(li, item):
+#     # 获取li的开始 结束
+#     start = 0
+#     end = len(li) - 1
+#
+#     # 只要start和end 还没错开 就一直找
+#     while start <= end:
+#         # 通过计算获取当前查找范围的中间位置
+#         mid = (start + end) // 2
+#         # 如果中间数就是item则返回True
+#         if li[mid] == item:
+#             return mid
+#         # 如果mid比item大，说明item可能会出现在mid左边，对左边再查找
+#         elif li[mid] > item:
+#             end = mid - 1
+#         # mid 比item小，说明item有可能在mid右边，对右边再查找
+#         else:
+#             start = mid + 1
+#     # 跳出循环说明没找到 返回错误
+#     return -1
+
+
+if __name__ == '__main__':
+    print(com1('baiyiisgreat', "yibai"))
